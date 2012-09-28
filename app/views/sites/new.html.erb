@@ -1,0 +1,129 @@
+<h1>To send email click here</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', sites_path %>
+
+
+<html>
+<head>
+<title>Test</title>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		window.onload = function(){ alert("welcome"); }
+	 });
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		$('ul.hover_block li.a').hover(
+			function(){
+				$(this).find('img').animate({top:'182px'},{queue:false,duration:500});
+				  }, 
+	  		function(){
+				$(this).find('img').animate({top:'0px'},{queue:false,duration:500});
+			});
+		$('ul.hover_block li.b').hover(
+			function(){
+				$(this).find('img').animate({left:'300px'},{queue:false,duration:500});
+				  }, 
+	  		function(){
+				$(this).find('img').animate({left:'0px'},{queue:false,duration:500});
+			});
+		      });
+
+		$(document).ready(function() {
+			$('ul.sf-menu').superfish({
+				delay: 2500,
+				animation: {opacity:'show',height:'show'},
+				speed: 'fast',
+				autoArrows: false,
+				dropShadows: false
+						});
+					})
+</script>
+<style media="screen">
+	
+	ul.hover_block { display: block; overflow: hidden; height: 1%; padding-bottom: 15px; }
+	ul.hover_block li{list-style:none;float:left;background: #fff;padding: 10px;width:300px; position: relative;margin-right: 20px; }
+	ul.hover_block li a{display: block;position: relative;overflow: hidden;height: 150px;width: 268px;padding: 16px;color: #000;}
+	ul.hover_block li a, ul.hover_block2 li a { text-decoration: none; }
+	ul.hover_block li img, ul.hover_block2 li img {position: absolute;top: 0;left: 0;border: 0;}
+.sf-menu a.sf-with-ul {min-width: 1px;padding-right: 2.25em;}
+.sf-menu a, .sf-menu a:visited {color: #1133AA;}
+.sf-menu a {border-left: 1px solid #FFFFFF;border-top: 1px solid #CFDEFF;padding: 0.75em 1em;text-decoration: none;}
+.sf-menu a {display: block;position: relative;}
+.sf-menu, .sf-menu * {list-style: none outside none;margin: 0;padding: 0;}
+
+</style>
+
+
+</head>
+
+<body>
+<ul class="hover_block">
+	<li class="a">
+		<a href="http://www.google.com">
+			<img alt="Dairy Milk" src="../images/dairymilk.jpg" style="top: 0px;">
+			Hi there, i’m text. Kisses from Google. www.google.com
+		</a>
+	</li>
+	<li class="b">
+		<a href="http://www.google.com">
+			<img alt="Guitar" src="../images/guitar.jpg" style="top: 0px;">
+			Hi there, i’m text. Kisses from Google. www.google.com
+		</a>	
+	</li>
+</ul>
+
+<ul id="sample-menu-1" class="sf-menu sf-js-enabled sf-shadow">
+	<li class="current">
+		<a class="sf-with-ul" href="#a">
+			menu item
+			<span class="sf-sub-indicator"> »</span>
+		</a>
+		<ul style="display: none; visibility: hidden;">
+			<li>
+				<a href="#aa">menu item</a>
+			</li>
+			<li>
+				<a href="#aa">menu item</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">menu item</a>
+	</li>
+	<li>
+		<a class="sf-with-ul" href="#">
+			menu item
+			<span class="sf-sub-indicator"> »</span>
+		</a>
+		<ul style="display: none; visibility: hidden;">
+			<li>
+				<a href="#aa">menu item</a>
+			</li>
+			<li>
+				<a href="#aa">menu item</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>
+	<p6>Guitar image </p6></br></br>
+	<p6><img src="../images/guitar.jpg" height=125 width=150 /></p6></br></br>
+	<button>Toggle between slide up and slide down</button>
+</h2>
+<span class="dropt" title="Title for the pop-up">Hot Zone Text
+	<span><img src="../images/rails.png"/><br/>
+  		Caption
+ 	</span>
+</span>
+
+</body>
+
+
+</html>
+

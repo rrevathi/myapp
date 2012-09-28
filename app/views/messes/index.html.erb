@@ -1,0 +1,84 @@
+<html>
+<h1>Listing messes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mess</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @messes.each do |mess| %>
+  <tr>
+    <td><%= mess.name %></td>
+    <td><%= mess.mess %></td>
+    <td><%= link_to 'Show', mess %></td>
+    <td><%= link_to 'Edit', edit_mess_path(mess) %></td>
+    <td><%= link_to 'Destroy', mess, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'New', new_site_path %>
+
+<script type="text/javascript">
+function invokeSubnavigation(thisid,action)
+{
+	var link_id = thisid.id;
+	var nav_id = 'parent_'+link_id;
+		if(action == 'onmouseover')
+		{
+			if(document.getElementById(nav_id))
+			{
+				document.getElementById(link_id).style.backgroundColor='#ffffff';
+				document.getElementById(nav_id).style.display = 'block';
+			}
+			
+		}	
+		
+	return;
+}
+</script>
+
+
+<div class="channel_section_navigation">
+	<div class="menu_parent1">
+		<div class="hovermenu1">
+			<ul class="hovermenu1">
+				<li id="home" style="border-left: 1px solid rgb(204, 204, 204); background-color: rgb(203, 209, 195);" onmouseover="javascript:invokeSubnavigation(this,'onmouseover');"><a class="topnav1" href="/">Home</a>
+				</li>
+<li id="" style="border-left: 1px solid rgb(204, 204, 204); background-color: rgb(203, 209, 195);" onmouseover="javascript:invokeSubnavigation(this,'onmouseover');"><a class="topnav2" href="/">News</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div style="clear: both;padding:0px;margin:0px;"></div>
+<div style="width:988px;border-bottom:0px solid #DBDBDB;">
+	<div style="float:left;">
+	<div id="parent_home" class="topnav_down_main1" style="display: none; text-align: center; width: 988px;">
+		<a class="topnav_down1" href="http://www.click.in/classifieds/1/59/jobs.html">Jobs</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://bookmarks.oneindia.in/">Bookmarks</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://www.oneblogs.in/">Blogs</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://chat.oneindia.in/">Chat</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://domains.oneindia.in/">Domains</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://answers.oneindia.in/">FAQ</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://explore.oneindia.in/">Explore</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+		<a class="topnav_down1" href="http://popcorn.oneindia.in/">My Movies</a>
+			<span class="line_gap_sub2">&nbsp;</span>
+	</div>
+	</div>
+</div>
+
+ 
+
+
+</html>

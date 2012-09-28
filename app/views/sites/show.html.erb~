@@ -1,0 +1,21 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @site.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @site.email %>
+</p>
+
+<p3>
+<h2>If u dont want this hide this
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
+</h2>
+</p3>
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

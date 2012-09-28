@@ -1,0 +1,20 @@
+class Shop < ActiveRecord::Base
+
+validates_presence_of:name, :age, :city, :date => true
+validates_length_of :name, :in => 4..30
+
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+  errors = Array(instance.error_message).join(',')
+  %(#{html_tag}<span class="validation-error">&nbsp;#{errors}</span>).html_safe
+
+end
+def self.search(search)
+  if search
+    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  else
+    find(:all)
+  end
+end
+
+
+end

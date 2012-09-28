@@ -1,0 +1,17 @@
+<%= form_for(@mess) do |f| %>
+  
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :mess %><br />
+    <%= f.text_field :mess %>
+  </div>
+<%= videostream(@token,"video_in") %>
+        <%= videorecord(@token,"video_out") %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

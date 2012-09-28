@@ -1,0 +1,5 @@
+class UserfndController < ApplicationController
+def show
+@user = Userfnd.find(params[:id])
+end
+end

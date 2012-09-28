@@ -1,0 +1,11 @@
+class Vote < ActiveRecord::Base
+has_many :options, :dependent => :destroy
+ belongs_to :user
+ 	def calculate_total
+    
+  end
+
+
+  accepts_nested_attributes_for :options, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
+has_many :comments
+end
